@@ -5,14 +5,14 @@
 <h1 align="center">Ambxs Achievement Unlocker</h1>
 
 <p align="center">
-  <a href="https://github.com/Timlonooo12/ihihxboxih/releases/latest/download/AmbxsAchievementUnlocker.exe"><b>⬇ Télécharger AmbxsAchievementUnlocker.exe</b></a>
+  <a href="https://github.com/Timlonooo12/ihihxboxih/raw/main/AmbxsAchievementUnlocker.exe"><b>⬇ Télécharger AmbxsAchievementUnlocker.exe</b></a>
 </p>
 
 ## Installation
 
 Il n'y a rien à installer :
 
-1. Téléchargez **AmbxsAchievementUnlocker.exe** avec le lien ci-dessus (ou depuis la page [Releases](https://github.com/Timlonooo12/ihihxboxih/releases/latest)).
+1. Téléchargez **AmbxsAchievementUnlocker.exe** avec le lien ci-dessus.
 2. Lancez le fichier.
 
 Le runtime .NET est inclus dans l'exe.
@@ -32,6 +32,14 @@ Le runtime .NET est inclus dans l'exe.
 Chaque compte affiche son Gamerscore vérifié, le montant restant et le temps estimé.
 
 La connexion de chaque compte est enregistrée de façon chiffrée sur votre PC et renouvelée automatiquement. Au prochain lancement, il n'est pas nécessaire de se reconnecter, et un lot reprend là où il s'était arrêté.
+
+## Vérification
+
+Empreinte SHA-256 de l'exe actuel :
+
+```
+f8c10000d22b21a2f79c3a335112525956167b559cde15288c2ed5ca34974e57
+```
 
 ## Licence
 
