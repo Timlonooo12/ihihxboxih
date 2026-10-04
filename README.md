@@ -38,7 +38,7 @@ La connexion de chaque compte est enregistrée de façon chiffrée sur votre PC 
 Empreinte SHA-256 de l'exe actuel :
 
 ```
-c0f7fa354e0f6dc141c68d29786a5bc0cd557100f2892173a4595275f611f91b
+1d28dc6e04097efa2dd376c43b2e20911be8c66ae6bbc56a9bb7d6329bd265c1
 ```
 
 ## Licence
