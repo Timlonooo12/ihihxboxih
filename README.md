@@ -48,7 +48,7 @@ Le build a été compilé et les tests simulés ont réussi. Ces tests ne consti
 Empreinte SHA-256 de l'exe actuel :
 
 ```
-a79227e5880bfda4cafb3975dbd6e0b26241b1c1c725cda5513080fe7ad076da
+99e1fde7f80b4b1e5dedf1c22d06ef1db479710569c62f4c32685536c993f69d
 ```
 
 ## Licence
