@@ -10,7 +10,7 @@
 
 ## Installation
 
-Il n'y a rien à installer :
+L'application se lance depuis l'exécutable. La connexion navigateur automatique nécessite Microsoft Edge WebView2 Runtime :
 
 1. Téléchargez **AmbxsAchievementUnlocker.exe** avec le lien ci-dessus.
 2. Lancez le fichier.
@@ -37,9 +37,11 @@ La connexion classique via la fenêtre Microsoft ou `/connect` utilise le stocka
 
 Dans **Settings → Discord**, renseignez le **Bot Token** et vos identifiants dans **Owners (Discord user IDs)**, cliquez sur **Apply**, puis activez **Enable Discord Bot**. La commande `/connect_accounts` est réservée aux owners et aux co-owners ajoutés avec `/addowner`.
 
-Collez un compte par ligne au format `mail:pass:mail2fa:pass2fa`, ou joignez un fichier `.txt` dans l’option `file`. La vérification e-mail utilise l’API REST de mail.tm, pas IMAP. La boîte de vérification doit déjà être associée au compte Microsoft et vous appartenir. Après connexion, vérifiez les comptes avec `/accounts`, puis utilisez votre `/unlock` habituel pour les sélectionner. Cette nouvelle connexion ne lance aucun déblocage et ne modifie pas `/unlock`.
+Collez un compte par ligne au format **`mail:pass`**, ou joignez un fichier `.txt` UTF-8 dans l’option `file`. Mail.tm n’est plus utilisé par cette commande. Au démarrage de chaque tentative, le programme crée un nouveau code Microsoft, ouvre le lien dans un navigateur privé distinct et saisit automatiquement le code, le mail et le mot de passe. Vous n’avez pas de lien à ouvrir manuellement. Un navigateur est actif à la fois. Après validation OAuth et Xbox, les comptes sont disponibles dans `/accounts` et dans le `/unlock` existant ; la connexion ne lance aucun déblocage.
 
-**Les identifiants du formulaire transitent par Discord et le bot.** Utilisez uniquement vos comptes ou des comptes explicitement autorisés. Préférez `/connect` pour ne pas communiquer de mots de passe au bot. Les nouvelles sessions par identifiants restent en mémoire et doivent être reconnectées après un redémarrage ou leur expiration. Pour CAPTCHA, SMS et Authenticator, utilisez `/connect` et validez sur Microsoft : la connexion par liste ne traite pas ces challenges. Le parcours par identifiants peut aussi échouer si les pages Microsoft changent.
+Utilisez **`/connection_status`** pour suivre votre lot, notamment après 15 minutes. **Annuler ce compte** interrompt la tentative courante et continue la liste ; `/cancel` arrête tout le lot. **Relancer les échecs** crée des codes neufs pour les échecs pendant cinq minutes après la fin, puis il faut soumettre une nouvelle liste.
+
+**Les identifiants du formulaire transitent par Discord et le bot.** Utilisez uniquement vos comptes ou des comptes explicitement autorisés. Préférez `/connect` pour ne pas communiquer de mots de passe au bot. Aucun mot de passe n’est sauvegardé dans le magasin des comptes ; les échecs restent temporairement en mémoire pour la relance. Le refresh token utilise le stockage chiffré existant et la limite de session de 24 heures reste inchangée. Une vraie 2FA, un CAPTCHA ou une page Microsoft non reconnue bloque la tentative : ces protections ne sont pas contournées. L’application doit tourner dans une session Windows interactive avec WebView2 Runtime.
 
 Le build a été compilé et les tests simulés ont réussi. Ces tests ne constituent pas une validation de connexion réelle à un compte Microsoft.
 
